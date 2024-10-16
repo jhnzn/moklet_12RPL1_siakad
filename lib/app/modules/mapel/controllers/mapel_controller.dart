@@ -7,22 +7,13 @@ class MapelController extends GetxController {
 
   final count = 0.obs;
   Rx<bool> isLoaded = false.obs;
-Rx<ModelMapel> mapel = ModelMapel().obs;
-
-void getMapel() {
-	isLoaded(false);
-	RepositoryMapel().loadMapel().then((ModelMapel response) {
-  	mapel(response);
-  	isLoaded(true);
-	});
-  }
+  Rx<ModelMapel> mapel = ModelMapel().obs;
 
   @override
   void onInit() {
-	super.onInit();
-	getMapel();
+    super.onInit();
+    getMapel();
   }
-
 
   @override
   void onReady() {
@@ -35,4 +26,13 @@ void getMapel() {
   }
 
   void increment() => count.value++;
+  
+  void getMapel() {
+	isLoaded(false);
+	RepositoryMapel().loadMapel().then((ModelMapel response) {
+  	mapel(response);
+  	isLoaded(true);
+	});
+  }
+  
 }
