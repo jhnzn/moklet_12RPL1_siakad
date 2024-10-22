@@ -9,6 +9,7 @@ abstract class Routes {
   static const AKUN = _Paths.AKUN;
   static const TAHUN_AJARAN = _Paths.TAHUN_AJARAN;
   static const MAPELTAMBAH = _Paths.MAPELTAMBAH;
+  static const LOGIN = _Paths.LOGIN;
 }
 
 abstract class _Paths {
@@ -19,5 +20,5 @@ abstract class _Paths {
   static const AKUN = '/akun';
   static const TAHUN_AJARAN = '/tahun-ajaran';
   static const MAPELTAMBAH = '/mapeltambah';
-
+  static const LOGIN = '/login';
 }
